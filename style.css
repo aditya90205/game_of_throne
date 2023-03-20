@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: red;
+    overflow: hidden;
+}
+
+.gameOver{
+    text-align: center;
+    padding-top: 40px;
+    visibility: hidden;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 130px;
+}
+
+.scoreCount{
+    position:absolute;
+    border: 2px solid black;
+    top: 10px;
+    width: 260px;
+    margin-left: 41%;
+    color: wheat;
+    font-size: 35px;
+}
+
+.gameContainer{
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+.dinos{
+    animation: Din 4s linear;
+}
+@keyframes Din {
+    0%{
+       bottom: 0px;
+    }
+    50%{
+       bottom: -105px;
+    }
+    100%{
+    bottom: -200px;
+    }
+}
+
+
+.dino{
+    background-image: url('dino.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+    width: 241px;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
+
+.animateDino{
+    animation: Dino 1.5s linear;
+}
+@keyframes Dino {
+    0%{
+       bottom: 0px;
+    }
+    50%{
+       bottom: 425px;
+    }
+    100%{
+    bottom: 0px;
+    }
+}
+
+.obstacle{
+    background-image: url('dragon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 105px;
+    width: 165px;
+    position: absolute;
+    bottom: 0;
+    right: 240px;
+}
+
+.animateObst{
+    animation: obs 6s linear infinite;
+}
+@keyframes obs {
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -9vw;
+    }
+}
